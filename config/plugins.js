@@ -9,10 +9,16 @@ module.exports = ({ env }) => ({
             },
             actionOptions: {
                 upload: {
-                    resource_type: 'auto', // <-- Must be here
+                    resource_type: 'auto',
                 },
                 delete: {},
             },
         },
     },
+    'users-permissions': {
+        config: {
+            jwtSecret: env('JWT_SECRET'),
+        },
+    },
 });
+
