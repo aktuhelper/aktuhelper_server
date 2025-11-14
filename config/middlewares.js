@@ -28,7 +28,7 @@ module.exports = [
   {
     name: 'strapi::cors',
     config: {
-      origin: ['https://ak47-bice.vercel.app', 'https://aktuhelper.com'],
+      origin: ['https://www.aktuhelper.com', 'https://aktuhelper.com'],
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
       keepHeaderOnError: true,
