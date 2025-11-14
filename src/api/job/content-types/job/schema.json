@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jobs",
+  "info": {
+    "singularName": "job",
+    "pluralName": "jobs",
+    "displayName": "job"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "company": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "jobType": {
+      "type": "enumeration",
+      "enum": [
+        "Internship",
+        "Full-Time",
+        "Part-Time"
+      ]
+    },
+    "salary": {
+      "type": "string"
+    },
+    "experience": {
+      "type": "string"
+    },
+    "applyLink": {
+      "type": "string",
+      "required": true
+    },
+    "deadline": {
+      "type": "date"
+    },
+    "description": {
+      "type": "text"
+    },
+    "skills": {
+      "type": "json"
+    }
+  }
+}

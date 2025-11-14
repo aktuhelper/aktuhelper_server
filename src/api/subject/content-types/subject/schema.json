@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subjects",
+  "info": {
+    "singularName": "subject",
+    "pluralName": "subjects",
+    "displayName": "subject"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "subject_name": {
+      "type": "string",
+      "required": true
+    },
+    "subject_code": {
+      "type": "string",
+      "required": true
+    },
+    "semester": {
+      "type": "enumeration",
+      "enum": [
+        "sem 1",
+        "sem 2",
+        "sem 3",
+        "sem 4",
+        "sem 5",
+        "sem 6",
+        "sem 7",
+        "sem 8"
+      ]
+    },
+    "course": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::course.course",
+      "inversedBy": "subjects"
+    },
+    "branch": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::branch.branch",
+      "inversedBy": "subjects"
+    },
+    "materials": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::material.material",
+      "mappedBy": "subject"
+    }
+  }
+}
