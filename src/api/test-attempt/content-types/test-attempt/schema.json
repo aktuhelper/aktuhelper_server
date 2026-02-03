@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "test_attempts",
+  "info": {
+    "singularName": "test-attempt",
+    "pluralName": "test-attempts",
+    "displayName": "test-attempt"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "test_attempts"
+    },
+    "practice_set": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::practice-set.practice-set",
+      "inversedBy": "test_attempts"
+    },
+    "score": {
+      "type": "integer"
+    },
+    "totalMarks": {
+      "type": "integer"
+    },
+    "correctAnswers": {
+      "type": "integer"
+    },
+    "wrongAnswers": {
+      "type": "integer"
+    },
+    "unattempted": {
+      "type": "integer"
+    },
+    "completedAt": {
+      "type": "datetime"
+    },
+    "email": {
+      "type": "string"
+    }
+  }
+}

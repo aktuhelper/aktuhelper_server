@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "apti_questions",
+  "info": {
+    "singularName": "apti-question",
+    "pluralName": "apti-questions",
+    "displayName": "apti-question"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "questionText": {
+      "type": "text",
+      "required": true
+    },
+    "option": {
+      "type": "json",
+      "required": true
+    },
+    "correctAnswer": {
+      "type": "integer"
+    },
+    "category": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "numerical",
+        "reasoning",
+        "verbal"
+      ]
+    },
+    "marks": {
+      "type": "integer"
+    },
+    "practice_set": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::practice-set.practice-set",
+      "inversedBy": "apti_questions"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}
